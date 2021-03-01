@@ -14,11 +14,20 @@
         </ol>
     <h2>
         <?php
-            echo $_GET['id'];
+            if (isset($_GET['id'])){
+                echo $_GET['id'];
+            } else {
+                echo "Welcome";
+            }
+            //unset(); = 변수 지우기
         ?>
     </h2>
     <?php
+        if(isset($_GET['id'])){
         echo file_get_contents("data/".$_GET['id']);
+        } else {
+            echo "Hello, PHP";
+        }
     ?>
 </body>
 </html>
