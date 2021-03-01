@@ -8,22 +8,18 @@
 <body>
     <h1><a href="index.php">WEB</a></h1>
         <ol>
-        <?php
-            $list = scandir('data');
+        <?php 
+            $list = scandir('./data'); // scandir() = fs.readFile
+            /*echo "<li>$list[0]</li>\n"; // \n = 일반적인 텍스트 문서에서 줄바꿈
+            .. = 상위 디렉토리
+            */       
             $i = 0;
             while($i<count($list)){
-                if($lsit[$i] !='.'){
-                    if($list[$i]) !='..'{
-        ?>
-        <li><a href="index.php?id=<?=$list[$i]?>"><?=$list[$i]?></a></li>
-        <?php
-                    }
-                }
-                $i = $i + 1; 
+                $i = $i + 1;                   
             }
-            ?>
+        ?>
     </ol>
-       <!-- 
+       <!--
        <ol>
             <li><a href="index.php?id=HTML">HTML</a></li>
             <li><a href="index.php?id=CSS">CSS</a></li>
