@@ -13,8 +13,12 @@
             // .. = 상위 디렉토리
             $i = 0;
             while($i<count($list)){
-                echo "<li><a href=\"index.php?id=$list[$i]\">$list[$i]</a></li>\n";  // \n = 일반적인 텍스트 문서에서 줄바꿈
+                if ($list[$i] != '.'){ // '!=' = 우항과 같지 않으면
+                    if ($list[$i] != '..'){
+                        echo "<li><a href=\"index.php?id=$list[$i]\">$list[$i]</a></li>\n";  // \n = 일반적인 텍스트 문서에서 줄바꿈
                 // \"index.php\" 여기에서 \" 는 \뒤에 나오는 문자의 문법을 무시한다.
+                    }    
+                } 
                 $i = $i + 1;                   
             }
         ?>
