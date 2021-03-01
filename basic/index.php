@@ -10,22 +10,15 @@
         <ol>
         <?php 
             $list = scandir('./data'); // scandir() = fs.readFile
-            /*echo "<li>$list[0]</li>\n"; // \n = 일반적인 텍스트 문서에서 줄바꿈
-            .. = 상위 디렉토리
-            */       
+            // .. = 상위 디렉토리
             $i = 0;
             while($i<count($list)){
+                echo "<li><a href=\"index.php?id=$list[$i]\">$list[$i]</a></li>\n";  // \n = 일반적인 텍스트 문서에서 줄바꿈
+                // \"index.php\" 여기에서 \" 는 \뒤에 나오는 문자의 문법을 무시한다.
                 $i = $i + 1;                   
             }
         ?>
     </ol>
-       <!--
-       <ol>
-            <li><a href="index.php?id=HTML">HTML</a></li>
-            <li><a href="index.php?id=CSS">CSS</a></li>
-            <li><a href="index.php?id=JavaScript">JavaScript</a></li>
-        </ol>
-        -->
     <h2>
         <?php
             if (isset($_GET['id'])){
