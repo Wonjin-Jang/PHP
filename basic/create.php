@@ -47,13 +47,16 @@
         ?>
     </ol>
     <a href="create.php">Create</a>
-    <h2>
-        <?php
-            print_title();
-        ?>
-    </h2>
-    <?php
-        print_description();
-    ?>
+    <form action="create_process.php" method="post">
+    <p>
+      <input type="text" name="title" placeholder="Title">
+    </P>
+    <p>
+      <textarea name="decription" placeholder="Description"></textarea>
+    </P>
+    <p>
+    <input type="submit">
+    </p>
+    </form>
 </body>
 </html>
