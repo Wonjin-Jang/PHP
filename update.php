@@ -62,7 +62,7 @@
         } ?>">
     </P>
     <p>
-      <textarea name="decription" placeholder="Description"><?php if(isset($_GET['id'])){
+      <textarea name="description" placeholder="Description"><?php if(isset($_GET['id'])){
             echo file_get_contents("data/".$_GET['id']);
             } else {
                 echo "Hello, PHP";

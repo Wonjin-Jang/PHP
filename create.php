@@ -34,7 +34,7 @@
       <input type="text" name="title" placeholder="Title">
     </P>
     <p>
-      <textarea name="decription" placeholder="Description"></textarea>
+      <textarea name="description" placeholder="Description"></textarea>
     </P>
     <p>
     <input type="submit">
