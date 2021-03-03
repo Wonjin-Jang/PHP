@@ -43,7 +43,8 @@
             ?>
         </ol>
 
-        <form action="process_create.php" method="post">
+        <form action="process_update.php" method="post">
+        <input type="hidden" name="id" value="<?=$_GET['id']?>"
         <p><input type="text" name="title" placeholder="title" valie="<?=$article['title']?>"></p>
         <p><textarea name=description placeholder="description"><?=$article['description']?></textarea></p>
         <p><input type="submit"</P>
