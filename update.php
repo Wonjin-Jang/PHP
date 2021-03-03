@@ -17,9 +17,9 @@
         'description'=>'Hello !'
     );
     $update_link ='';
-    $delete_link ='';
 
-    if(isset($_GET['id]'])){
+
+    if(isset($_GET['id'])){
         $filtered_id = mysqli_real_escape_string($conn,$_GET['id']);
         $sql = "SELECT * FROM topic WHERE id={$filtered_id}";
         $result = mysqli_query($conn,$sql);
@@ -27,8 +27,8 @@
         $article['title'] = $row['title'];
         $article['description'] = $row['description'];
 
-        $update_link = '<a href="update.php?id='$_GET['id']'">Update</a>';
-        $delete_link = '<a href="delete.php?id='$_GET['id']'">Delete</a>';
+        $update_link = '<a href="update.php?id='.$_GET['id'].'">Update</a>';
+        
     }
 ?>
 
@@ -50,7 +50,7 @@
         <input type="hidden" name="id" value="<?=$_GET['id']?>"
         <p><input type="text" name="title" placeholder="title" valie="<?=$article['title']?>"></p>
         <p><textarea name=description placeholder="description"><?=$article['description']?></textarea></p>
-        <p><input type="submit"</P>
+        <p><input type="submit"></P>
         </form>
     </body>
 </html>

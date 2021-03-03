@@ -14,7 +14,7 @@
 
     $article = array(
         'title'=>'Welcome',
-        'description'=>'Hello !'
+        'description'=>'Hello'
     );
 
 ?>
@@ -35,7 +35,7 @@
         <form action="process_create.php" method="post">
         <p><input type="text" name="title" placeholder="title"></p>
         <p><textarea name=description placeholder="description"></textarea></p>
-        <p><input type="submit"</P>
+        <p><input type="submit"></P>
         </form>
     </body>
 </html>

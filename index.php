@@ -29,12 +29,11 @@
         $article['description'] = $row['description'];
 
         $update_link = '<a href="update.php?id='.$_GET['id'].'">Update</a>';
-        $delete_link = '
-        <form action="process_delete.php" method="post">
-        <input type="hidden" name="id" value="'.$_GET['id'].'"
+        $delete_link = '<form action="process_delete.php" method="post">
+        <input type="hidden" name="id" value="'.$_GET['id'].'">
         <input type="submit" value="Delete">
-        </form>
-        ';
+      </form>
+    ';
     }
 ?>
 
@@ -52,8 +51,8 @@
             ?>
         </ol>
         <a href="create.php">Create</a>
-        <?=$update_link?>
-        <?=$delete_link?>
+        <p><?=$update_link?></p>
+        <p><?=$delete_link?></p>
         <h2><?=
         $article['title']
         ?></h2>
