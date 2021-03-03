@@ -26,7 +26,7 @@
         $article['title'] = $row['title'];
         $article['description'] = $row['description'];
 
-        $update_link = '<a href="update.php?id='$_GET['id']'">Update</a>';
+        //$update_link = '<a href="update.php?id='$_GET['id']'">Update</a>';
     }
 ?>
 
