@@ -21,5 +21,4 @@ if($result===false){
 } else {
     echo '<a href="index.php">success</a>';
 }
-echo $sql;
 ?>

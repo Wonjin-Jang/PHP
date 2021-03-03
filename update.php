@@ -5,7 +5,6 @@
         "123123", 
         "opentutorials"
     );
-
     $sql = "SELECT * FROM topic";
     $result = mysqli_query($conn, $sql);
     $list = '';
@@ -43,11 +42,11 @@
             $list
             ?>
         </ol>
-        <a href="create.php">Create</a>
-        <?=$update_link?>
-        <h2><?=
-        $article['title']
-        ?></h2>
-        <?=$article['description']?>
+
+        <form action="process_create.php" method="post">
+        <p><input type="text" name="title" placeholder="title" valie="<?=$article['title']?>"></p>
+        <p><textarea name=description placeholder="description"><?=$article['description']?></textarea></p>
+        <p><input type="submit"</P>
+        </form>
     </body>
 </html>

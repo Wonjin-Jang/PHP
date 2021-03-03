@@ -17,14 +17,6 @@
         'description'=>'Hello !'
     );
 
-    if(isset($_GET['id]'])){
-        $filtered_id = mysqli_real_escape_string($conn,$_GET['id']);
-        $sql = "SELECT * FROM topic WHERE id={$filtered_id}";
-        $result = mysqli_query($conn,$sql);
-        $row = mysqli_fetch_array($result);
-        $article['title'] = $row['title'];
-        $article['description'] = $row['description'];
-    }
 ?>
 
 <!DOCTYPE html>
