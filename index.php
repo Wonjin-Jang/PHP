@@ -9,6 +9,7 @@
         <ol>
             <li>HTML</li>
         </ol>
+        <a href="create.php">Create</a>
         <h2>Welcome</h2>
         Welcome 
     </body>
